@@ -8,4 +8,15 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "render#index"
+
+  namespace :api do
+    get "brands" => "brands#index"
+    get "brands/:id/models" => "brands#models_by_brand"
+    post "brands" => "brands#create"
+    get "models" => "models#index"
+    post "/brands/:id/models" => "models#create"
+    put "models/:id" => "models#update"
+
+    post 'scripts/populate_database', to: 'script#populate_database'
+  end
 end
