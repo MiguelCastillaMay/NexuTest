@@ -23,6 +23,7 @@ And the app will be available on localhost:3000
 
 ## Deploy
 The project is deployed on Render and this is the link: https://nexutest.onrender.com
+Because I'm using the free version of Render it may take a few seconds to load, and after some seconds of inactivity, it'll sleep down.
 
 ### Routes
 
