@@ -1,24 +1,77 @@
-# README
+## Local installation
+In order to use the project from a local computer you need to follow the next steps:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Step 1
+Clone the repo on your computer and open the folder in the terminal
 
-Things you may want to cover:
+### Step 2
+```
+  bundle install
+```
 
-* Ruby version
+### Step 3
+```
+  rails db:create db:migrate
+```
 
-* System dependencies
+### Step 4
+```
+  rails s
+```
 
-* Configuration
+And the app will be available on localhost:3000
 
-* Database creation
+## Deploy
+The project is deployed on Render and this is the link: https://nexutest.onrender.com
 
-* Database initialization
+### Routes
 
-* How to run the test suite
+### List brands
+```
+  GET /api/brands
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+### List models
+```
+  GET /api/models
+```
 
-* Deployment instructions
+### List models by brand
+```
+  GET /api/brands/1/models
+```
 
-* ...
+### New brand
+```
+  POST /api/brands
+```
+
+#### Example body
+```
+  { "name": "ferrari" }
+```
+
+### New model
+```
+  POST /api/brands/1/models
+```
+
+#### Example body
+```
+  { "name": "model 2", average_price: 320000 }
+```
+
+### Update model
+```
+  PUT /api/models/2
+```
+
+#### Example body
+```
+{ "average_price": 100000 }
+```
+
+
+## Notes
+I enjoyed the challenge because it reminded me of the first time I used Ruby on Rails and tried to create an API.
+I had multiple setbacks with the deployment, the internet, updates from my PC, and trying to execute the ```rails db:migrate``` from the deployment, but it was fun and I had a great time. I hope to hear from you very soon!
